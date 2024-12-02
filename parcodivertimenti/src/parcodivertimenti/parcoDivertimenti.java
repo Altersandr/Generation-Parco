@@ -1,13 +1,21 @@
 package parcodivertimenti;
 
+import java.util.Scanner;
+
 public class parcoDivertimenti {
 
 	public static void main(String[] args) {
 
 		// Variabili generali, giorni di apertura, visitatori giornalieri, guadagno netto totale, guadagno netto giornaliero
 		
-		int daysOpen = 3; 
-		int visitors = 200;
+		Scanner s = new Scanner(System.in);
+		
+		System.out.print("Inserisci numero giorni di apertura: ");
+		int daysOpen = s.nextInt();
+		
+		System.out.print("Inserisci numero di visitatori giornalieri: ");
+		int visitors = s.nextInt();
+		
 		int totalNet = 0; 
 		int dailyNet = 0;
 
@@ -222,7 +230,7 @@ public class parcoDivertimenti {
 			
 		}
 
-		System.out.println("STATISTICHE FINALI DEL PARCO!\n");
+		System.out.println("\nSTATISTICHE FINALI DEL PARCO!\n");
 
 		// Identificazione dell'attrazione piu visitata
 
@@ -266,5 +274,7 @@ public class parcoDivertimenti {
 		// Stampa netto totale
 
 		System.out.println("Il netto totale e: " + totalNet + "$");	
+		
+		s.close();
 	}
 }
